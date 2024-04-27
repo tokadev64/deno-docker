@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "build": "docker build . -t deno-docker",
+    "run": "docker run -p 1993:1993 -ti deno-docker",
+    "start": "deno task build && deno task run",
+    "hono": "deno run --allow-net --allow-env --allow-read --allow-ffi main.ts"
+  },
+  "lock": false,
+  "fmt": {
+    "lineWidth": 80,
+    "semiColons": true,
+    "singleQuote": true
+  },
+  "imports": {
+    "hono": "https://deno.land/x/hono@v4.2.3/mod.ts"
+  }
+}

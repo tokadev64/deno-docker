@@ -12,6 +12,7 @@
     "singleQuote": true
   },
   "imports": {
+    "@david/dax": "jsr:@david/dax@^0.41.0",
     "hono": "https://deno.land/x/hono@v4.2.3/mod.ts"
   }
 }

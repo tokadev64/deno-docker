@@ -2,7 +2,10 @@
   "tasks": {
     "build": "docker build . -t deno-docker",
     "run": "docker run -p 1993:1993 -ti deno-docker",
-    "start": "deno task build && deno task run",
+    "setup": "cp docker/DockerfileBase Dockerfile",
+    "setup-arm": "cp docker/DockerfileArm Dockerfile",
+    "brun": "deno task build && deno task run",
+    "in": "docker run -it deno-docker bash",
     "hono": "deno run --allow-net --allow-env --allow-read --allow-ffi main.ts"
   },
   "lock": false,

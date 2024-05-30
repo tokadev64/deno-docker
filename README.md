@@ -21,7 +21,7 @@ scoop install deno
 ※ Arm アーキテクチャマシン (M1 Mac etc) を使用している場合は、Arm 用の Dockerfile に上書きしてください。
 
 ```
-cp DockerfileArm docker/Dockerfile
+deno task setup-arm
 ```
 
 ## Docker ビルド + 起動

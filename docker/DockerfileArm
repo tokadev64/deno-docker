@@ -29,8 +29,11 @@ RUN cd grib2/ \
   && make \
   && cp wgrib2/wgrib2 /usr/local/bin/
 
-USER deno
+RUN rm wgrib2.tgz.v3.1.1 \
+  && rm -rf grib2 \
+  && chown deno:deno /app
 
+USER deno
 COPY . .
 RUN deno cache main.ts
 
